@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+#connectMetamask{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: lightgray 0px 5px 10px;
+    margin-bottom: 20px;
+}
+    #connectWalletMessage{
+        font-size: large;
+        font-weight: bold;
+    }
+
+    #connectWallet{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: blue;
+    }
+
+    #connectWallet:active{
+        color: blue;
+        background-color: white;
+    }
+
+#votingStation{
+    display: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+    #timer{
+        font-size: larger;
+    }
+        #time{
+            font-weight: bold;
+        }
+
+    #mainBoard, #result{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        max-width: 700px;
+        margin: auto;
+    }
+        #candidateBoard, #resultBoard{
+            border-collapse: collapse;
+        }
+            #candidateBoard th, #resultBoard th{
+                padding: 5px 10px;
+                border: 1px solid black;
+            }
+            #candidateBoard td, #resultBoard td{
+                padding: 5px 10px;
+                border: 1px solid black;
+            }
+    #voteForm{
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+    }
+        label {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+            #voteForm label{
+                margin: 20px;
+            }
+            #vote{
+                font-size: larger;
+                padding: 10px 20px;
+                border-radius: 10px;
+                width: 50%;
+                min-width: 100px;;
+                max-width: 200px;
+            }
+                #vote::-webkit-inner-spin-button,
+                #vote::-webkit-outer-spin-button,
+                #electionDuration::-webkit-inner-spin-button,
+                #electionDuration::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+            #voteButton{
+                margin: 10px;
+                font-size: larger;
+                color: white;
+                background-color: green;
+                padding: 10px 20px;
+                border-radius: 10px;
+                border: none;
+            }
+                #voteButton:active{
+                    background-color: white;
+                }
+    
+    #showResultContainer{
+        display: none;
+    }
+        #showResult{
+            font-size: large;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            background-color: yellow;
+        }
+
+            #showResult:active{
+                color: black;
+                background-color: yellow;
+            }
+
+    #result{
+        display: none;
+        margin-top: 20px;
+        border-top: 2px solid black;
+    }
+
+    #admin{
+        max-width: 700px;
+        font-weight: bold;
+        padding: 20px;
+        margin: 10px auto;
+        border-top: 2px solid black;
+        display: none;
+        flex-direction: column;
+    }
+        #electionMessage{
+            font-size: larger;
+            font-weight: bold;
+        }
+
+   
+        #adminHeading{
+            font-size: larger;
+        }
+
+        #tools{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+        }
+            #startElection, #addCandidate{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 40%;
+                min-width: 300px;
+                max-width: 500px;
+                padding: 20px;
+                margin: 10px;
+                border: 1px solid gray;
+                border-radius: 10px;
+            }
+
+                #startElection input, #addCandidate input{
+                    padding: 5px 10px;
+                    margin: 5px;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                }
+
+                #startElection button, #addCandidate button{
+                    font-size: large;
+                    padding: 5px 10px;
+                    margin: 5px;
+                    color: white;
+                    background-color: green;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+#addCandidate {
+    display: none;
+}               
+
