@@ -1,4 +1,3 @@
-import React, {useEffect} from "react";
 const connectWalletMessage = document.querySelector('#connectWalletMessage');
 const connectWallet = document.querySelector('#connectWallet');
 const votingStation = document.querySelector('#votingStation');
@@ -278,19 +277,22 @@ const contractABI = [
   let signer;
 
 const provider = new ethers.providers.Web3Provider(window.ethereum, 80002);
-
-provider.send("eth_requestAccounts", []).then(() => {
-    provider.listAccounts().then((accounts)=> {
-        signer = provider.getSigner(accounts[0])  
-        contract = new ethers.Contract(contractAddress, contractABI, signer)       
-    });
+const accountSwitch=()=>{provider.send("eth_requestAccounts", []).then(() => {
+  provider.listAccounts().then((accounts)=> {
+      signer = provider.getSigner(accounts[0])  
+      contract = new ethers.Contract(contractAddress, contractABI, signer)       
+  });
 });
+}
 
 
-useEffect(() => {
-  signer = provider.getSigner(account[0]);
-} 
-  ),[]
+
+
+
+// useEffect(() => {
+  
+// } 
+//   ),[]
 
 
 // Functions
